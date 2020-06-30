@@ -1,7 +1,7 @@
 {
-  "name": "vscode-icons",
-  "displayName": "vscode-icons",
-  "description": "Icons for Visual Studio Code",
+  "name": "windows98-icons-theme",
+  "displayName": "Windows98 Icons Theme",
+  "description": "Windows98 Icons for Visual Studio Code",
   "version": "10.1.1",
   "publisher": "vscode-icons-team",
   "license": "MIT",
@@ -60,13 +60,13 @@
   "activationEvents": [
     "*"
   ],
-  "main": "out/src/",
+  "main": "dist/src/vscode-icons.bundle.js",
   "contributes": {
     "iconThemes": [
       {
-        "id": "vscode-icons",
-        "label": "VSCode Icons",
-        "path": "out/src/vsicons-icon-theme.json",
+        "id": "windows98-icons",
+        "label": "Windows98 Icons",
+        "path": "dist/src/vsicons-icon-theme.json",
         "_watch": true
       }
     ],
@@ -271,7 +271,7 @@
     "posttest": "nyc report -r lcov",
     "test:vs": "node ./node_modules/vscode/bin/test",
     "vscode:prepublish": "npm run dist",
-    "vscode:uninstall": "node ./out/src/uninstall.js",
+    "vscode:uninstall": "node ./dist/src/uninstall.bundle.js",
     "precompile": "rimraf ./out ./dist",
     "compile": "tsc -p tsconfig.prod.json",
     "postcompile": "npm run bundle",
